@@ -10,7 +10,7 @@ const chromaDB = new ChromaDB();
 const gemini = new Gemini();
 
 export async function handleUserQuery(query) {
-  // Fetch relevant transcripts and articles
+  
   const transcripts = await prisma.transcript.findMany({
     where: {
       OR: [
